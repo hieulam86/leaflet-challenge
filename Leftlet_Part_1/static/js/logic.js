@@ -43,11 +43,13 @@ function createMap() {
   legend.addTo(myMap);
 
   // Perform an API call to the USGS GeoJSON API to get the earthquake data and call createMarkers when it completes
-  d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson").then(createMarkers);
+  d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson").then(function(earthquakeData) {
+    createMarkers(earthquakeData, myMap);
+  });
 }
 
 // Function to create earthquake markers
-function createMarkers(earthquakeData) {
+function createMarkers(earthquakeData, myMap) {
 // Get the features array from earthquake data
 let features = earthquakeData.features;
 
@@ -90,17 +92,17 @@ return magnitude * 4;
 function mapColor(depth) {
 switch(true) {
   case depth > 90:
-    return "red";
+    return "darkblue";
   case depth > 70:
-    return "orangered";
+    return "purple";
   case depth > 50:
-    return "orange";
+    return "orangered";
   case depth > 30:
-    return "gold";
+    return "red";
   case depth > 10:
-    return "yellow";
+    return "orange";
   default:
-    return "lightgreen";
+    return "yellow";
 }
 }
 
