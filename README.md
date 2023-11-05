@@ -2,6 +2,8 @@
 
 # Module 15 Challenge: Earthquake Data Visualization
 
+![leaflet_challenge](https://github.com/hieulam86/leaflet-challenge/assets/132635473/8d3f113a-d02b-4e67-9063-64ab110c431d)
+
 Background
 The United States Geological Survey (USGS) plays a vital role in providing scientific data related to natural hazards, ecosystem health, environmental conditions, and the effects of climate change and land-use practices. USGS scientists are dedicated to developing innovative methods and tools to deliver timely, relevant, and valuable information about Earth and its dynamic processes.
 
